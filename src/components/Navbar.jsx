@@ -1,5 +1,8 @@
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { Disclosure,Transition, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import {Fragment} from "react"
+import avatar from "../assets/icons/avatar.png"
+
 
 
 function classNames(...classes) {
@@ -8,6 +11,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
+    <>
     <Disclosure as="nav" className="bg-neutral-100 dark:bg-gray-900 py-3 dark:text-white fixed top-0 z-20 w-full">
      
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
@@ -23,8 +27,8 @@ export default function Navbar() {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
+                        src={avatar}
+                        alt="user"
                       />
                     </MenuButton>
                   </div>
@@ -38,7 +42,7 @@ export default function Navbar() {
                           href="#"
                           className={classNames(focus ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                         >
-                          Your Profile
+                          Register
                         </a>
                       )}
                     </MenuItem>
@@ -48,7 +52,7 @@ export default function Navbar() {
                           href="#"
                           className={classNames(focus ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                         >
-                          Settings
+                          Login
                         </a>
                       )}
                     </MenuItem>
@@ -58,7 +62,7 @@ export default function Navbar() {
                           href="#"
                           className={classNames(focus ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                         >
-                          Sign out
+                          Log out
                         </a>
                       )}
                     </MenuItem>
@@ -70,5 +74,7 @@ export default function Navbar() {
 
          
     </Disclosure>
+    <div className='h-[55px]'></div>
+    </>
   );
 }
