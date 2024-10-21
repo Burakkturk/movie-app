@@ -6,7 +6,7 @@ Project aims to create a Movie App.
 
 ## Output
 
-![NBA-LEGENDS-APP](./movie-app.gif)
+![Movie-App](./movie-app.gif)
 
 ### At the end of the project, following topics are to be covered;
 
